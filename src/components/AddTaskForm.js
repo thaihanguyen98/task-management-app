@@ -26,6 +26,7 @@ const AddTaskForm = ({ onAdd }) => {
   const [assignedTo, setAssignedTo] = useState("");
   const [status, setStatus] = useState("");
   const [error, setError] = useState(""); //error message for form validation
+  const [success, setSuccess] = useState(false); //success submit task
 
   //FORM SUBMISSION HANDLER
   /**
@@ -51,6 +52,7 @@ const AddTaskForm = ({ onAdd }) => {
     setAssignedTo("");
     setStatus("in-progress");
     setError("");
+    setSuccess(true);
   };
   //Form Rendering
   return (
@@ -59,6 +61,7 @@ const AddTaskForm = ({ onAdd }) => {
         <Chip label="Add Task" size="small" />
       </Divider>
       {error && <Alert severity="error">{error}</Alert>}
+      {success && <Alert severity="success">Your task has been added.</Alert>}
 
       <TextField
         label="Task Name"
