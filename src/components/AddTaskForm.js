@@ -128,7 +128,7 @@ const AddTaskForm = ({ onAdd }) => {
         fullWidth
         sx={{ mt: 2 }}
       >
-        Save Task
+        Submit Task
       </Button>
       <Divider sx={{ pb: "16px" }} />
     </Box>
